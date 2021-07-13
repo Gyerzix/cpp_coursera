@@ -19,6 +19,7 @@
 - [Отбор палиндромов](selection_of_palindromes.cpp)
 - [Перемещение строк](move_strings.cpp)
 - [Разворот последовательности](reverse_vector.cpp)
+- [Разворот последовательности - 2](reverse_vector_2.cpp)
 - [Очередь](queue.cpp)
 - [Ежемесячные дела](monthly_affairs.cpp)
 - [Анаграммы](anagrams.cpp)
