@@ -8,12 +8,12 @@ using namespace std;
 
 int main() {
 	int Q; cin >> Q;
-	string command; //Команда
-	string bus; //Название автобуса
-	string stopi; //Название остановки
-	int stop_count; //Количество остановок автобуса
-	map<string, vector<string>> bus_stops; //[автобус; остановки]
-	map<string, vector<string>> stop_buses; //[остановка; автобусы]
+	string command; //РљРѕРјР°РЅРґР°
+	string bus; //РќР°Р·РІР°РЅРёРµ Р°РІС‚РѕР±СѓСЃР°
+	string stopi; //РќР°Р·РІР°РЅРёРµ РѕСЃС‚Р°РЅРѕРІРєРё
+	int stop_count; //РљРѕР»РёС‡РµСЃС‚РІРѕ РѕСЃС‚Р°РЅРѕРІРѕРє Р°РІС‚РѕР±СѓСЃР°
+	map<string, vector<string>> bus_stops; //[Р°РІС‚РѕР±СѓСЃ; РѕСЃС‚Р°РЅРѕРІРєРё]
+	map<string, vector<string>> stop_buses; //[РѕСЃС‚Р°РЅРѕРІРєР°; Р°РІС‚РѕР±СѓСЃС‹]
 	for (int i = 0; i < Q; i++) {
 		cin >> command;
 		if (command == "NEW_BUS") {
