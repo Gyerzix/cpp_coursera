@@ -6,12 +6,12 @@
 using namespace std;
 
 int main() {
-	int m = 1; // номер автобуса
+	int m = 1; // РЅРѕРјРµСЂ Р°РІС‚РѕР±СѓСЃР°
 	map<int, set<string>> bus_stops;
 	int Q; cin >> Q;
 	for (int i = 0; i < Q; i++) {
-		int c = 0; // 1 - если есть такой маршрут, иначе - 0
-		int j; // номер существующего автобуса
+		int c = 0; // 1 - РµСЃР»Рё РµСЃС‚СЊ С‚Р°РєРѕР№ РјР°СЂС€СЂСѓС‚, РёРЅР°С‡Рµ - 0
+		int j; // РЅРѕРјРµСЂ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРіРѕ Р°РІС‚РѕР±СѓСЃР°
 		set<string> stops;
 		int count_stops; cin >> count_stops;
 		for (int j = 0; j < count_stops; j++) {
