@@ -8,16 +8,16 @@ using namespace std;
 
 
 string FindNameByYear(int year, const map<int, string>& names) {
-    string name;  // изначально имя неизвестно
+    string name;  // РёР·РЅР°С‡Р°Р»СЊРЅРѕ РёРјСЏ РЅРµРёР·РІРµСЃС‚РЅРѕ
 
-    // перебираем всю историю по возрастанию ключа словаря, то есть в хронологическом порядке
+    // РїРµСЂРµР±РёСЂР°РµРј РІСЃСЋ РёСЃС‚РѕСЂРёСЋ РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ РєР»СЋС‡Р° СЃР»РѕРІР°СЂСЏ, С‚Рѕ РµСЃС‚СЊ РІ С…СЂРѕРЅРѕР»РѕРіРёС‡РµСЃРєРѕРј РїРѕСЂСЏРґРєРµ
     for (const auto& item : names) {
-        // если очередной год не больше данного, обновляем имя
+        // РµСЃР»Рё РѕС‡РµСЂРµРґРЅРѕР№ РіРѕРґ РЅРµ Р±РѕР»СЊС€Рµ РґР°РЅРЅРѕРіРѕ, РѕР±РЅРѕРІР»СЏРµРј РёРјСЏ
         if (item.first <= year) {
             name = item.second;
         }
         else {
-            // иначе пора остановиться, так как эта запись и все последующие относятся к будущему
+            // РёРЅР°С‡Рµ РїРѕСЂР° РѕСЃС‚Р°РЅРѕРІРёС‚СЊСЃСЏ, С‚Р°Рє РєР°Рє СЌС‚Р° Р·Р°РїРёСЃСЊ Рё РІСЃРµ РїРѕСЃР»РµРґСѓСЋС‰РёРµ РѕС‚РЅРѕСЃСЏС‚СЃСЏ Рє Р±СѓРґСѓС‰РµРјСѓ
             break;
         }
     }
@@ -59,15 +59,15 @@ string GetHistory(int year, const map<int, string>& names) {
 class Person {
 public:
     void ChangeFirstName(int year, const string& first_name) {
-        // добавить факт изменения имени на first_name в год year
+        // РґРѕР±Р°РІРёС‚СЊ С„Р°РєС‚ РёР·РјРµРЅРµРЅРёСЏ РёРјРµРЅРё РЅР° first_name РІ РіРѕРґ year
         firstname[year] = first_name;
     }
     void ChangeLastName(int year, const string& last_name) {
-        // добавить факт изменения фамилии на last_name в год year
+        // РґРѕР±Р°РІРёС‚СЊ С„Р°РєС‚ РёР·РјРµРЅРµРЅРёСЏ С„Р°РјРёР»РёРё РЅР° last_name РІ РіРѕРґ year
         lastname[year] = last_name;
     }
     string GetFullName(int year) {
-        // получить имя и фамилию по состоянию на конец года year
+        // РїРѕР»СѓС‡РёС‚СЊ РёРјСЏ Рё С„Р°РјРёР»РёСЋ РїРѕ СЃРѕСЃС‚РѕСЏРЅРёСЋ РЅР° РєРѕРЅРµС† РіРѕРґР° year
         const string first_name = FindNameByYear(year, firstname);
         const string last_name = FindNameByYear(year, lastname);
         string full_name = first_name + " " + last_name;
@@ -86,7 +86,7 @@ public:
         return full_name;
     }
     string GetFullNameWithHistory(int year) {
-        // получить все имена и фамилии по состоянию на конец года year
+        // РїРѕР»СѓС‡РёС‚СЊ РІСЃРµ РёРјРµРЅР° Рё С„Р°РјРёР»РёРё РїРѕ СЃРѕСЃС‚РѕСЏРЅРёСЋ РЅР° РєРѕРЅРµС† РіРѕРґР° year
         const string first_name = FindNameByYear(year, firstname);
         const string last_name = FindNameByYear(year, lastname);
         const string history_first_name = GetHistory(year, firstname);
@@ -134,7 +134,7 @@ public:
     }
 
 private:
-    // приватные поля
+    // РїСЂРёРІР°С‚РЅС‹Рµ РїРѕР»СЏ
     map<int, string> firstname;
     map<int, string> lastname;
 };
