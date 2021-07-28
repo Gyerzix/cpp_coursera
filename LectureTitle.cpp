@@ -12,14 +12,14 @@ struct Specialization {
 
 struct Course {
 	string value;
-	explicit Course(string new_value) {
+	explicit Course(const string& new_value) {
 		value = new_value;
 	}
 };
 
 struct Week {
 	string value;
-	explicit Week(string new_value) {
+	explicit Week(const string& new_value) {
 		value = new_value;
 	}
 };
@@ -28,7 +28,7 @@ struct LectureTitle {
 	string specialization;
 	string course;
 	string week;
-	LectureTitle(Specialization s, Course w, Week k) {
+	LectureTitle(const Specialization& s, const Course& w, const Week& k) {
 		specialization = s.value;
 		course = w.value;
 		week = k.value;
