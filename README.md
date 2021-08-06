@@ -66,7 +66,7 @@
 - [Класс Rational](rational.cpp)
 - [Класс Rational ч.1](rational_interface.cpp)
 - [Класс Rational ч.2](rational_eq_add_sub.cpp)
-- [Класс Rational ч.3](rational_mul_div.cpp)
+- [Класс Rational ч.3](rational_mult_div.cpp)
 - [Класс Rational ч.4](rational_io.cpp)
 - [Класс Rational ч.5](rational_map.cpp)
 ### Исключения
