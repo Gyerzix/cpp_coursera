@@ -10,12 +10,12 @@ using namespace std;
 
 class Rational {
 public:
-    Rational() { // Реализуйте конструктор по умолчанию
+    Rational() { // Р РµР°Р»РёР·СѓР№С‚Рµ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
         num = 0;
         den = 1;
     }
 
-    Rational(int numerator, int denominator) { // Реализуйте конструктор
+    Rational(int numerator, int denominator) { // Р РµР°Р»РёР·СѓР№С‚Рµ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
         if (numerator > 0 && denominator < 0) {
             int k = gcd(abs(numerator), abs(denominator));
             if (gcd(abs(numerator), abs(denominator))) {
@@ -56,11 +56,11 @@ public:
         }
     }
 
-    int Numerator() const { // Реализуйте этот метод
+    int Numerator() const { // Р РµР°Р»РёР·СѓР№С‚Рµ СЌС‚РѕС‚ РјРµС‚РѕРґ
         return num;
     }
 
-    int Denominator() const { // Реализуйте этот метод
+    int Denominator() const { // Р РµР°Р»РёР·СѓР№С‚Рµ СЌС‚РѕС‚ РјРµС‚РѕРґ
         return den;
     }
     int size() {
@@ -71,7 +71,7 @@ private:
     int den;
 };
 
-// Реализуйте для класса Rational операторы ==, + и -
+// Р РµР°Р»РёР·СѓР№С‚Рµ РґР»СЏ РєР»Р°СЃСЃР° Rational РѕРїРµСЂР°С‚РѕСЂС‹ ==, + Рё -
 
 bool operator==(const Rational& lhs, const Rational& rhs) {
     if (lhs.Numerator() == rhs.Numerator() && lhs.Denominator() == rhs.Denominator()) {
@@ -102,7 +102,7 @@ Rational operator-(const Rational& lhs, const Rational& rhs) {
     }
 }
 
-// Реализуйте для класса Rational операторы * и /
+// Р РµР°Р»РёР·СѓР№С‚Рµ РґР»СЏ РєР»Р°СЃСЃР° Rational РѕРїРµСЂР°С‚РѕСЂС‹ * Рё /
 Rational operator*(const Rational& lhs, const Rational& rhs) {
     return Rational(lhs.Numerator() * rhs.Numerator(), lhs.Denominator() * rhs.Denominator());
 }
@@ -111,7 +111,7 @@ Rational operator/(const Rational& lhs, const Rational& rhs) {
     return Rational(lhs.Numerator() * rhs.Denominator(), lhs.Denominator() * rhs.Numerator());
 }
 
-// Реализуйте для класса Rational операторы << и >>
+// Р РµР°Р»РёР·СѓР№С‚Рµ РґР»СЏ РєР»Р°СЃСЃР° Rational РѕРїРµСЂР°С‚РѕСЂС‹ << Рё >>
 ostream& operator<<(ostream& stream, const Rational& v) {
     stream << setfill('0');
     stream << v.Numerator() << '/' << v.Denominator();
@@ -130,8 +130,8 @@ istream& operator>>(istream& stream, Rational& v) {
     return stream;
 }
 
-// Реализуйте для класса Rational оператор(ы), необходимые для использования его
-// в качестве ключа map'а и элемента set'а
+// Р РµР°Р»РёР·СѓР№С‚Рµ РґР»СЏ РєР»Р°СЃСЃР° Rational РѕРїРµСЂР°С‚РѕСЂ(С‹), РЅРµРѕР±С…РѕРґРёРјС‹Рµ РґР»СЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РµРіРѕ
+// РІ РєР°С‡РµСЃС‚РІРµ РєР»СЋС‡Р° map'Р° Рё СЌР»РµРјРµРЅС‚Р° set'Р°
 bool operator < (const Rational& lhs, const Rational& rhs) {
     int denominator = lhs.Denominator() * rhs.Denominator();
     int lhs_num = lhs.Numerator() * rhs.Denominator();
