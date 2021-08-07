@@ -63,9 +63,7 @@ public:
     int Denominator() const { // Реализуйте этот метод
         return den;
     }
-    int size() {
-
-    }
+	
 private:
     int num;
     int den;
