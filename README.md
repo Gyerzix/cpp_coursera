@@ -71,6 +71,6 @@
 - [Класс Rational ч.5](rational_map.cpp)
 ### Исключения
 - [Функция EnsureEqual](ensure_equal.cpp)
-- [Исключения в классе Rational]()
+- [Исключения в классе Rational](rational_throw.cpp)
 - [Калькулятор обыкновенных дробей]()
 - [Работа с сервером времени]()
